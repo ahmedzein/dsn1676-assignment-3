@@ -18,3 +18,28 @@ html {
   box-sizing: inherit;
 }
 
+body {
+    position: relative;
+    background-image: url(../images/stars.svg);
+    background-color: black;
+}
+
+.asteroid {
+    position: absolute;
+    height: auto;
+    width: auto;
+    animation: asteroid-rotate 3s ease-in-out infinite alternate;
+    left: 200px;
+    height: 300px;
+}
+
+@keyframes asteroid-rotate {
+    
+    0% {
+        transform: rotate(30deg);
+    }
+    
+    100% {
+        transform: rotate(360deg);
+    }
+}
