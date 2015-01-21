@@ -20,17 +20,35 @@ html {
 
 body {
     position: relative;
-    background-image: url(../images/stars.svg);
     background-color: black;
+}
+
+.stars {
+    position: absolute;
+    height: 100%;
+    background-image: url(../images/stars.svg);
+    animation: stars 5s linear infinite;
+}
+
+@keyframes stars {
+    
+    0% {
+        transform: scale(1,1);
+    }
+    
+    100% {
+        transform: scale(2,1);
+    }
+    
 }
 
 .asteroid {
     position: absolute;
-    height: auto;
-    width: auto;
+    height: 150px;
+    width: 150px;
     animation: asteroid-rotate 10s ease-in-out infinite alternate;
     left: 200px;
-    height: 300px;
+    top: 200px;
 }
 
 @keyframes asteroid-rotate {
@@ -41,5 +59,29 @@ body {
     
     100% {
         transform: rotate(360deg);
+    }
+}
+
+.ship {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    right: 400px;
+    top: 500px;
+    animation: ship-move 5s linear infinite;
+}
+
+@keyframes ship-move {
+    
+    0% {
+        transform: translate(80px, 100px);
+    }
+    
+    50% {
+        transform: translate(30px, -40px);
+    }
+    
+    100% {
+        transform: translate(80px, 100px);
     }
 }
